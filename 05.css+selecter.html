@@ -1,11 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 선택자</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      p {
+        color: gray;
+      }
+      .class-style {
+        color: green;
+      }
+      .class-style2 {
+        color: red;
+      }
+      #id-style {
+        color: blue;
+      }
+      .important {
+        color: pink !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p>태그 선택자</p>
+    <!-- emmet -->
+    <!-- p.class-style -->
+    <!-- 케밥 스타일 -> kebab-style -->
+    <p class="class-style">클래스 선택자</p>
+    <p class="class-style class-style2">클래스 선택자</p>
+    <p class="class-style class-style2 important" id="id-style">id 선택자</p>
+  </body>
 </html>
