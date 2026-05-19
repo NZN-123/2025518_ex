@@ -1,1027 +1,265 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- title이나 meta는 등장한지도 오래되었고 title시각적으로 보이지만 desctiprion은 별로 참조도 잘 안된다 -->
-    <title>JIN 포트폴리오 연습</title>
-    <!-- 검색 등에 노출되는 데이터 -->
-    <!-- og tag -->
-    <!-- https://nzn-123.github.io/2025518_ex/ -->
-    <meta property="og:title" content="Jin의 포폴" />
-    <meta property="og:description" content="백엔드 배우고 있어요!" />
-    <meta property="og:url" content="https://nzn-123.github.io/2025518_ex" />
-    <meta
-      property="og:image"
-      content="https://nzn-123.github.io/2025518_ex/og_preview.png"
-    />
-    <!-- ... -->
-
-    <!-- Favicon -->
-    <meta name="description" content="저의 기술을 보여드리죠" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./favicon-96x96.png"
-      sizes="96x96"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>가구 사이트</title>
+    <meta name="description" content="미니멀 가구 브랜드 JIN - 공간에 여백을 더하다" />
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="shortcut icon" href="./favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./apple-touch-icon.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-
-    <!-- WebFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
-          format("woff2");
-        font-weight: 100;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
-          format("woff2");
-        font-weight: 200;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
-          format("woff2");
-        font-weight: 300;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
-          format("woff2");
-        font-weight: 400;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
-          format("woff2");
-        font-weight: 500;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
-          format("woff2");
-        font-weight: 600;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
-          format("woff2");
-        font-weight: 700;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
-          format("woff2");
-        font-weight: 800;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Pretendard";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
-          format("woff2");
-        font-weight: 900;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2")
-          format("woff2");
-        font-weight: 100;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2")
-          format("woff2");
-        font-weight: 200;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2")
-          format("woff2");
-        font-weight: 300;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2")
-          format("woff2");
-        font-weight: 400;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2")
-          format("woff2");
-        font-weight: 500;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2")
-          format("woff2");
-        font-weight: 600;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2")
-          format("woff2");
-        font-weight: 700;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
-          format("woff2");
-        font-weight: 800;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Paperozi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2")
-          format("woff2");
-        font-weight: 900;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "KerisKeduLine";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_Line.woff2")
-          format("woff2");
-        font-weight: normal;
-        font-display: swap;
-      }
-
-      :root {
-        --bg-dark: #F5F5F5; /* 보조색 1: 전체 배경 (연한 회색) */
-        --bg-card: #FFFFFF; /* 카드 배경 (깔끔한 흰색) */
-        --bg-nav: rgba(245, 245, 245, 0.85); /* 네비게이션바 배경 */
-        --text-primary: #0f172a; /* 주 텍스트 (어두운 슬레이트) */
-        --text-secondary: #475569; /* 부 텍스트 (슬레이트 회색) */
-        --primary: #FF0000; /* 주조색: 빨간색 */
-        --primary-glow: rgba(255, 0, 0, 0.08); /* 빨간색 글로우 */
-        --accent: #BBD5DA; /* 보조색 3: 차분한 민트 블루 */
-        --accent-glow: rgba(187, 213, 218, 0.3); /* 민트 블루 글로우 */
-        --bg-alt-color: #DFF1F1; /* 보조색 2: 대체 배경색 (부드러운 민트 그린) */
-        --border-color: rgba(187, 213, 218, 0.4); /* 테두리 색상 */
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        --max-width: 1100px;
-      }
-
-      /* Reset & Basic Styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: "Pretendard";
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background-color: var(--bg-dark);
-        color: var(--text-primary);
-        font-family: "Pretendard";
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* Font Assignments */
-      h1, h2, h3, h4, h5, h6 {
-        font-family: "Paperozi";
-        font-weight: 700;
-        letter-spacing: -0.02em;
-      }
-
-      span {
-        font-family: "KerisKeduLine";
-      }
-
-      /* Layout & Sections */
-      .section {
-        padding: 80px 24px;
-        max-width: var(--max-width);
-        margin: 0 auto;
-      }
-
-      .bg-alt {
-        background-color: var(--bg-alt-color);
-        border-radius: 24px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        border: 1px solid var(--border-color);
-      }
-
-      .section-title {
-        font-size: 2.25rem;
-        margin-bottom: 40px;
-        position: relative;
-        display: inline-block;
-        color: var(--text-primary);
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 40px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
-        border-radius: 2px;
-      }
-
-      /* Navbar */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background-color: var(--bg-nav);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border-color);
-        transition: var(--transition);
-      }
-
-      .nav-container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 16px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: var(--text-primary);
-        text-decoration: none;
-      }
-
-      .logo span {
-        color: var(--primary);
-        font-family: inherit;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 32px;
-      }
-
-      .nav-links a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-weight: 500;
-        transition: var(--transition);
-      }
-
-      .nav-links a:hover {
-        color: var(--primary);
-      }
-
-      /* Hero Section */
-      .hero {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: 120px 24px 80px;
-        max-width: var(--max-width);
-        margin: 0 auto;
-      }
-
-      .hero-glow {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(circle, rgba(187, 213, 218, 0.4) 0%, rgba(223, 241, 241, 0.2) 50%, rgba(245, 245, 245, 0) 100%);
-        filter: blur(60px);
-        pointer-events: none;
-        z-index: -1;
-      }
-
-      .hero-content {
-        max-width: 700px;
-        width: 100%;
-      }
-
-      .badge {
-        display: inline-block;
-        padding: 6px 16px;
-        border-radius: 99px;
-        background-color: var(--primary-glow);
-        color: var(--primary);
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-bottom: 24px;
-        border: 1px solid rgba(255, 0, 0, 0.2);
-      }
-
-      .hero-title {
-        font-size: 3.5rem;
-        line-height: 1.2;
-        margin-bottom: 24px;
-      }
-
-      .hero-title span {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: inherit;
-      }
-
-      .hero-subtitle {
-        font-size: 1.15rem;
-        color: var(--text-secondary);
-        margin-bottom: 40px;
-        max-width: 600px;
-      }
-
-      .hero-actions {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 64px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 1rem;
-        text-decoration: none;
-        transition: var(--transition);
-        cursor: pointer;
-      }
-
-      .btn-primary {
-        background-color: var(--primary);
-        color: white;
-        box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
-      }
-
-      .btn-primary:hover {
-        background-color: #e60000;
-        transform: translateY(-2px);
-      }
-
-      .btn-outline {
-        border: 1px solid var(--border-color);
-        color: var(--text-primary);
-        background-color: rgba(255, 255, 255, 0.8);
-      }
-
-      .btn-outline:hover {
-        background-color: rgba(255, 255, 255, 1);
-        border-color: var(--primary);
-      }
-
-      .hero-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-      }
-
-      .stat-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        padding: 24px;
-        border-radius: 16px;
-        transition: var(--transition);
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
-      }
-
-      .stat-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--primary);
-        box-shadow: 0 10px 30px rgba(255, 0, 0, 0.05);
-      }
-
-      .stat-num {
-        font-size: 2.25rem;
-        font-weight: 800;
-        color: var(--text-primary);
-        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 4px;
-        font-family: inherit;
-      }
-
-      .stat-lbl {
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        font-weight: 500;
-      }
-
-      /* About Me */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .about-desc p {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        margin-bottom: 24px;
-      }
-
-      .about-desc strong {
-        color: var(--text-primary);
-      }
-
-      .principles {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        margin-top: 32px;
-      }
-
-      .principle-item {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        padding: 24px;
-        border-radius: 16px;
-        display: flex;
-        gap: 16px;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
-      }
-
-      .principle-item .icon {
-        font-size: 1.5rem;
-        line-height: 1;
-      }
-
-      .principle-item h3 {
-        font-size: 1.15rem;
-        margin-bottom: 8px;
-        color: var(--text-primary);
-      }
-
-      .principle-item p {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        margin-bottom: 0;
-      }
-
-      /* Tech Stack */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-      }
-
-      .skill-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        padding: 32px;
-        border-radius: 16px;
-        transition: var(--transition);
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
-      }
-
-      .skill-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--primary);
-        box-shadow: 0 10px 30px rgba(255, 0, 0, 0.05);
-      }
-
-      .skill-category-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 24px;
-        color: var(--text-primary);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .skill-tag {
-        display: inline-block;
-        padding: 6px 14px;
-        background-color: var(--bg-dark);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        font-weight: 500;
-        transition: var(--transition);
-      }
-
-      .skill-tag:hover {
-        background-color: var(--primary-glow);
-        color: var(--primary);
-        border-color: rgba(255, 0, 0, 0.2);
-      }
-
-      /* Projects */
-      .projects-container {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-      }
-
-      .project-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        padding: 40px;
-        border-radius: 20px;
-        transition: var(--transition);
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
-      }
-
-      .project-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
-        opacity: 0;
-        transition: var(--transition);
-      }
-
-      .project-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(255, 0, 0, 0.2);
-        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
-      }
-
-      .project-card:hover::before {
-        opacity: 1;
-      }
-
-      .project-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-      }
-
-      .project-date {
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        font-weight: 500;
-      }
-
-      .project-role {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--primary);
-        background-color: var(--primary-glow);
-        padding: 4px 12px;
-        border-radius: 99px;
-      }
-
-      .project-name {
-        font-size: 1.5rem;
-        margin-bottom: 16px;
-        color: var(--text-primary);
-      }
-
-      .project-desc {
-        color: var(--text-secondary);
-        margin-bottom: 24px;
-        font-size: 0.98rem;
-      }
-
-      .project-points {
-        list-style-type: none;
-        margin-bottom: 28px;
-      }
-
-      .project-points li {
-        position: relative;
-        padding-left: 20px;
-        margin-bottom: 8px;
-        font-size: 0.92rem;
-        color: var(--text-secondary);
-      }
-
-      .project-points li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: var(--primary);
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 1;
-        top: -1px;
-      }
-
-      .project-tech {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .tech-badge {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--text-secondary);
-        background-color: rgba(187, 213, 218, 0.15);
-        border: 1px solid var(--border-color);
-        padding: 4px 10px;
-        border-radius: 6px;
-      }
-
-      /* Contact Section */
-      .text-center {
-        text-align: center;
-      }
-
-      .contact-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        padding: 48px;
-        border-radius: 20px;
-        max-width: 600px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
-      }
-
-      .contact-card::after {
-        content: '';
-        position: absolute;
-        bottom: -50px;
-        right: -50px;
-        width: 150px;
-        height: 150px;
-        background: radial-gradient(circle, rgba(255, 0, 0, 0.08) 0%, transparent 70%);
-        pointer-events: none;
-      }
-
-      .contact-intro {
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        margin-bottom: 32px;
-      }
-
-      .contact-email {
-        font-size: 1.25rem;
-        margin-bottom: 32px;
-        color: var(--text-primary);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .email-icon {
-        font-size: 1.5rem;
-      }
-
-      /* 원래 사용자 설정: uijinnnn609@naver.com 를 담은 span 태그 */
-      .contact-email span {
-        font-family: "KerisKeduLine" !important;
-        color: var(--primary);
-        font-weight: bold;
-        border-bottom: 2px dashed rgba(255, 0, 0, 0.4);
-        padding-bottom: 2px;
-      }
-
-      .contact-links {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .contact-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 24px;
-        background-color: var(--bg-dark);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        color: var(--text-primary);
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-weight: 600;
-        transition: var(--transition);
-      }
-
-      .contact-btn:hover {
-        background-color: var(--primary-glow);
-        color: var(--primary);
-        border-color: rgba(255, 0, 0, 0.2);
-        transform: translateY(-2px);
-      }
-
-      .contact-svg {
-        width: 20px;
-        height: 20px;
-        fill: currentColor;
-      }
-
-      /* Footer */
-      .footer {
-        padding: 40px 24px;
-        text-align: center;
-        color: var(--text-secondary);
-        border-top: 1px solid var(--border-color);
-        margin-top: 80px;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 900px) {
-        .hero-title {
-          font-size: 2.75rem;
-        }
-        .skills-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        .principles {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .section {
-          padding: 60px 16px;
-        }
-        .hero {
-          padding: 100px 16px 60px;
-        }
-        .hero-title {
-          font-size: 2.25rem;
-        }
-        .hero-stats {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-        .hero-actions {
-          flex-direction: column;
-        }
-        .nav-links {
-          display: none;
-        }
-        .project-card {
-          padding: 24px;
-        }
-        .contact-card {
-          padding: 32px 16px;
-        }
-        .contact-email {
-          font-size: 1.05rem;
-          flex-direction: column;
-          gap: 8px;
-        }
+      @theme {
+        --font-sans: 'Inter', 'Noto Sans KR', sans-serif;
+        --color-warm-50: #faf9f7;
+        --color-warm-100: #f5f3ef;
+        --color-warm-200: #e8e4dd;
+        --color-warm-300: #d4cec3;
+        --color-warm-400: #b5ac9e;
+        --color-warm-500: #968c7d;
+        --color-warm-600: #7a7064;
+        --color-warm-700: #5c544a;
+        --color-warm-800: #3d3731;
+        --color-warm-900: #1f1c18;
+        --color-accent: #8b7355;
+      }
+
+      html { scroll-behavior: smooth; }
+
+      .product-card:hover .product-img {
+        transform: scale(1.05);
       }
     </style>
   </head>
-  <body>
-    <!-- Header Navigation -->
-    <header class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo">JIN<span>.dev</span></a>
-        <nav class="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="hero-content">
-        <span class="badge">Backend Student Developer</span>
-        <h1 class="hero-title">안녕하세요.<br>백엔드를 공부하는 <span>JIN</span>입니다.</h1>
-        <p class="hero-subtitle">
-          프로그래머스 데브코스에서 백엔드 개발을 깊이 있게 공부하고 있으며, 견고한 데이터 모델링과 효율적인 서버 아키텍처, 데이터 정합성 보장에 몰두하고 있는 주니어 엔지니어입니다.
+  <body class="bg-warm-50 text-warm-800 font-sans antialiased">
+
+    <!-- ========== NAV (sticky + position) ========== -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-warm-50/80 backdrop-blur-md border-b border-warm-200/60">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" class="text-xl font-semibold tracking-tight text-warm-900">JIN</a>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-600">
+          <li><a href="#products" class="hover:text-warm-900 transition">컬렉션</a></li>
+          <li><a href="#features" class="hover:text-warm-900 transition">브랜드</a></li>
+          <li><a href="#about" class="hover:text-warm-900 transition">소개</a></li>
+          <li><a href="#contact" class="hover:text-warm-900 transition">문의</a></li>
+        </ul>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="메뉴 열기">
+          <span class="block w-5 h-0.5 bg-warm-800 transition-all" id="bar1"></span>
+          <span class="block w-5 h-0.5 bg-warm-800 transition-all" id="bar2"></span>
+          <span class="block w-5 h-0.5 bg-warm-800 transition-all" id="bar3"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-warm-50 border-t border-warm-200/60 px-6 pb-4">
+        <ul class="flex flex-col gap-3 text-sm font-medium text-warm-600 pt-3">
+          <li><a href="#products" class="block py-1 hover:text-warm-900 transition">컬렉션</a></li>
+          <li><a href="#features" class="block py-1 hover:text-warm-900 transition">브랜드</a></li>
+          <li><a href="#about" class="block py-1 hover:text-warm-900 transition">소개</a></li>
+          <li><a href="#contact" class="block py-1 hover:text-warm-900 transition">문의</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========== HERO (flex center + responsive) ========== -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <!-- BG subtle gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-warm-100 via-warm-50 to-warm-200"></div>
+      <!-- Decorative circle (position absolute) -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-warm-300/40"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full border border-warm-300/30"></div>
+
+      <div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+        <p class="text-sm tracking-[0.3em] uppercase text-warm-500 mb-4 font-medium">Minimal Furniture</p>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-light text-warm-900 leading-tight mb-6">
+          공간에<br /><span class="font-semibold">여백</span>을 더하다
+        </h1>
+        <p class="text-base md:text-lg text-warm-500 max-w-lg mx-auto mb-10 leading-relaxed font-light">
+          불필요한 것을 덜어낸 가구. 당신의 공간을 조용히 완성합니다.
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">학습 프로젝트</a>
-          <a href="#contact" class="btn btn-outline">연락하기</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-card">
-            <div class="stat-num">90%+</div>
-            <div class="stat-lbl">테스트 커버리지 지향</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">300+</div>
-            <div class="stat-lbl">알고리즘 문제 해결</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">100%</div>
-            <div class="stat-lbl">학습 가동률 (Passion)</div>
-          </div>
-        </div>
+        <a href="#products" class="inline-block px-8 py-3.5 bg-warm-900 text-warm-50 text-sm font-medium tracking-wide rounded-none hover:bg-warm-700 transition-colors">
+          컬렉션 보기
+        </a>
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-grid">
-        <div class="about-desc">
-          <p>
-            동작하는 코드를 작성하는 것을 넘어, <strong>"장애에 견고하고 성능이 최적화된 백엔드 설계"</strong>에 대해 치열하게 고민하고 있습니다. 컴퓨터 사이언스(CS) 기본기와 클린 코드 작성을 안정적인 서비스 설계의 출발점이라고 생각합니다.
-          </p>
-          <p>
-            현재 프로그래머스 데브코스 백엔드 과정을 밟으며 자바와 스프링 생태계를 깊이 공부하고 있으며, 데이터베이스 인덱스 설계, 동시성 제어, 캐싱 전략 적용, 비동기 서버 모델 등에 많은 흥미를 느끼고 있습니다. 기술을 배울 때 항상 '동작 원리'와 '왜 쓰는가'에 집중합니다.
-          </p>
-          <div class="principles">
-            <div class="principle-item">
-              <div class="icon">⚡</div>
-              <div>
-                <h3>JVM & Database Focus</h3>
-                <p>JVM 내부 원리, DB 인덱싱 최적화, 쿼리 튜닝에 큰 관심이 있습니다.</p>
-              </div>
-            </div>
-            <div class="principle-item">
-              <div class="icon">🛡️</div>
-              <div>
-                <h3>Study & Share</h3>
-                <p>코드 리뷰와 기술 공유를 좋아하며 동료들과 함께 성장해 나갑니다.</p>
-              </div>
+    <!-- ========== PRODUCTS GRID (flex-wrap + responsive) ========== -->
+    <section id="products" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
+        <div>
+          <p class="text-xs tracking-[0.25em] uppercase text-warm-400 mb-2">Collection</p>
+          <h2 class="text-2xl md:text-3xl font-light text-warm-900">신규 컬렉션</h2>
+        </div>
+        <a href="#" class="text-sm text-warm-500 hover:text-warm-800 transition border-b border-warm-300 pb-0.5">전체 보기 →</a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Card 1 -->
+        <a href="./product-chair.html" class="block">
+        <article class="product-card group cursor-pointer">
+          <div class="aspect-[4/5] bg-warm-200 rounded-sm overflow-hidden mb-4">
+            <div class="product-img w-full h-full bg-warm-300/50 transition-transform duration-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-warm-400" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M3 17h18M5 17V9a2 2 0 012-2h10a2 2 0 012 2v8M8 7V5a1 1 0 011-1h6a1 1 0 011 1v2"/></svg>
             </div>
           </div>
+          <h3 class="text-sm font-medium text-warm-800 mb-1">오크 라운지 체어</h3>
+          <p class="text-sm text-warm-400">₩ 890,000</p>
+        </article>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="./product-table.html" class="block">
+        <article class="product-card group cursor-pointer">
+          <div class="aspect-[4/5] bg-warm-200 rounded-sm overflow-hidden mb-4">
+            <div class="product-img w-full h-full bg-warm-300/50 transition-transform duration-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-warm-400" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="6" rx="1"/><path d="M5 14v4M19 14v4M4 8V6a1 1 0 011-1h14a1 1 0 011 1v2"/></svg>
+            </div>
+          </div>
+          <h3 class="text-sm font-medium text-warm-800 mb-1">월넛 다이닝 테이블</h3>
+          <p class="text-sm text-warm-400">₩ 1,450,000</p>
+        </article>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="./product-shelf.html" class="block">
+        <article class="product-card group cursor-pointer">
+          <div class="aspect-[4/5] bg-warm-200 rounded-sm overflow-hidden mb-4">
+            <div class="product-img w-full h-full bg-warm-300/50 transition-transform duration-500 flex items-center justify-center">
+              <svg class="w-16 h-16 text-warm-400" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M4 20h16M6 20v-4h12v4M6 16V10a1 1 0 011-1h10a1 1 0 011 1v6M9 9V7M15 9V7"/></svg>
+            </div>
+          </div>
+          <h3 class="text-sm font-medium text-warm-800 mb-1">미니멀 선반 유닛</h3>
+          <p class="text-sm text-warm-400">₩ 520,000</p>
+        </article>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES (flex + responsive grid) ========== -->
+    <section id="features" class="bg-warm-100 border-y border-warm-200/60">
+      <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+        <p class="text-xs tracking-[0.25em] uppercase text-warm-400 mb-2 text-center">Why JIN</p>
+        <h2 class="text-2xl md:text-3xl font-light text-warm-900 text-center mb-16">우리가 다른 이유</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 flex items-center justify-center border border-warm-300 rounded-full mb-5">
+              <svg class="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-warm-800 mb-2">미니멀 디자인</h3>
+            <p class="text-sm text-warm-500 leading-relaxed max-w-xs">불필요한 장식을 제거하고 본질적인 아름다움만 남겼습니다.</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 flex items-center justify-center border border-warm-300 rounded-full mb-5">
+              <svg class="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-warm-800 mb-2">지속 가능한 소재</h3>
+            <p class="text-sm text-warm-500 leading-relaxed max-w-xs">FSC 인증 원목과 친환경 마감재만을 사용합니다.</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 flex items-center justify-center border border-warm-300 rounded-full mb-5">
+              <svg class="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-warm-800 mb-2">무료 배송 & 설치</h3>
+            <p class="text-sm text-warm-500 leading-relaxed max-w-xs">전국 어디서나 무료 배송, 전문가 설치를 제공합니다.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-alt">
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-category-title">
-            <span style="font-family: inherit;">Languages & Frameworks</span>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">Spring Security</span>
-            <span class="skill-tag">JPA/Hibernate</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">NestJS</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-category-title">
-            <span style="font-family: inherit;">Databases & Cache</span>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Redis (Cache/Session)</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">QueryDSL</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-category-title">
-            <span style="font-family: inherit;">DevOps & Infrastructure</span>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS (EC2, S3, RDS)</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Github Actions (CI/CD)</span>
-            <span class="skill-tag">Nginx</span>
-            <span class="skill-tag">Linux</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-date">2024.03 ~ 2024.04</span>
-            <span class="project-role">Solo Toy Project</span>
-          </div>
-          <h3 class="project-name">실시간 티켓 예약 동시성 제어 시뮬레이션</h3>
-          <p class="project-desc">
-            선착순 예약 대규모 동시 요청 상황을 시뮬레이션하고, 데이터 정합성을 유지하며 처리 속도를 튜닝해 보는 개인 학습용 프로젝트입니다. 
-            데이터베이스 비관적 락(Pessimistic Lock)과 Redis 분산 락(Redisson)의 적용 결과를 다각도로 비교 분석했습니다.
+    <!-- ========== ABOUT / BANNER (relative + absolute position) ========== -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+      <div class="relative bg-warm-200 rounded-sm overflow-hidden flex flex-col md:flex-row min-h-[400px]">
+        <!-- Text side -->
+        <div class="flex-1 flex flex-col justify-center p-10 md:p-16">
+          <p class="text-xs tracking-[0.25em] uppercase text-warm-400 mb-3">About Us</p>
+          <h2 class="text-2xl md:text-3xl font-light text-warm-900 mb-4">조용한 존재감</h2>
+          <p class="text-sm text-warm-600 leading-relaxed mb-6 max-w-md">
+            JIN은 2020년 서울에서 시작된 가구 브랜드입니다.
+            매일 사용하지만 눈에 띄지 않는, 공간에 자연스럽게 스며드는 가구를 만듭니다.
           </p>
-          <ul class="project-points">
-            <li>Redisson 분산 락을 설계·구현하여 1,000건의 동시 예약 요청에서 초과 예약 건수 0% 달성</li>
-            <li>낙관적 락(Optimistic Lock) 재시도 루프 병목 지점과 비관적 락의 데이터베이스 Lock 획득 대기 지표 비교</li>
-            <li>JMeter 부하 테스트를 진행하여 병목 지점을 찾고 최적의 락 해제 타임아웃 설정을 정의</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">JPA</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">AWS</span>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-date">2023.11 ~ 2023.12</span>
-            <span class="project-role">Dev Course Team Project</span>
-          </div>
-          <h3 class="project-name">RESTful 쇼핑몰 서비스 백엔드 API 및 쿼리 개선</h3>
-          <p class="project-desc">
-            기초 도메인 설계를 기반으로 객체지향적인 회원, 주문, 결제 도메인 API를 구축한 웹 교육 프로젝트입니다. 
-            QueryDSL을 활용하여 복잡한 다중 필터 조회 시 발생하는 쿼리 및 데이터베이스 접근 병목을 개선했습니다.
-          </p>
-          <ul class="project-points">
-            <li>QueryDSL과 Spring Data JPA의 Fetch Join을 활용해 연관관계 탐색 시 발생하는 N+1 문제 해결</li>
-            <li>상품 테이블 내 복합 인덱스(Compound Index) 설계를 통해 상품 데이터 10만 건 기준 조회 쿼리 속도 3.2초에서 0.15초로 단축</li>
-            <li>Spring Security와 JWT를 연동해 인증 필터 로직 구현 및 Refresh Token 기반 토큰 자동 재발행 구현</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">QueryDSL</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">Spring Security</span>
-            <span class="tech-badge">Docker</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-alt text-center">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-card">
-        <p class="contact-intro">
-          공부 중인 기술에 대한 스터디 및 토론 제안, 협업 사이드 프로젝트 제안 등 성장할 수 있는 어떠한 연락이든 대단히 환영합니다!
-        </p>
-        <div class="contact-email">
-          <span class="email-icon">📧</span>
-          제 연락처는 <span>uijinnnn609@naver.com</span>입니다.
-        </div>
-        <div class="contact-links">
-          <a href="https://github.com/NZN-123" target="_blank" class="contact-btn">
-            <svg class="contact-svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            GitHub
+          <a href="#contact" class="text-sm text-warm-800 font-medium border-b border-warm-800 self-start pb-0.5 hover:text-warm-600 hover:border-warm-600 transition">
+            더 알아보기 →
           </a>
         </div>
+        <!-- Visual side (placeholder) -->
+        <div class="flex-1 bg-warm-300/50 min-h-[250px] md:min-h-0 flex items-center justify-center">
+          <span class="text-warm-400 text-sm tracking-widest uppercase">Crafted with care</span>
+        </div>
+        <!-- Decorative absolute element -->
+        <div class="absolute bottom-4 right-4 text-[10px] text-warm-400 tracking-widest">EST. 2020</div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2026 JIN. All rights reserved.</p>
+    <!-- ========== NEWSLETTER / CONTACT (flex center) ========== -->
+    <section id="contact" class="bg-warm-900 text-warm-50">
+      <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 flex flex-col items-center text-center">
+        <p class="text-xs tracking-[0.25em] uppercase text-warm-500 mb-3">Newsletter</p>
+        <h2 class="text-2xl md:text-3xl font-light mb-4">소식을 받아보세요</h2>
+        <p class="text-sm text-warm-500 max-w-md mb-8 leading-relaxed">
+          새로운 컬렉션과 특별 이벤트 소식을 이메일로 전해드립니다.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md" onsubmit="event.preventDefault();">
+          <input
+            id="email-input"
+            type="email"
+            placeholder="이메일 주소"
+            class="flex-1 px-4 py-3 bg-warm-800 border border-warm-700 text-warm-100 text-sm placeholder:text-warm-600 focus:outline-none focus:border-warm-500 transition rounded-none"
+          />
+          <button
+            id="subscribe-btn"
+            type="submit"
+            class="px-6 py-3 bg-warm-50 text-warm-900 text-sm font-medium hover:bg-warm-200 transition rounded-none"
+          >
+            구독하기
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER (flex responsive) ========== -->
+    <footer class="border-t border-warm-200/60 bg-warm-50">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <p class="text-lg font-semibold text-warm-900 mb-1">JIN</p>
+            <p class="text-xs text-warm-400">공간에 여백을 더하다</p>
+          </div>
+          <ul class="flex flex-wrap gap-6 text-xs text-warm-500">
+            <li><a href="#products" class="hover:text-warm-800 transition">컬렉션</a></li>
+            <li><a href="#features" class="hover:text-warm-800 transition">브랜드</a></li>
+            <li><a href="#about" class="hover:text-warm-800 transition">소개</a></li>
+            <li><a href="#contact" class="hover:text-warm-800 transition">문의</a></li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-warm-200/60 text-xs text-warm-400 flex flex-col sm:flex-row sm:justify-between gap-2">
+          <p>&copy; 2025 JIN Furniture. All rights reserved.</p>
+          <p>Designed with minimal love.</p>
+        </div>
+      </div>
     </footer>
+
+    <!-- ========== Mobile Menu Toggle ========== -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Close mobile menu on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    </script>
+
   </body>
 </html>

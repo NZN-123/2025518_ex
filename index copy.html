@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title이나 meta는 등장한지도 오래되었고 title시각적으로 보이지만 desctiprion은 별로 참조도 잘 안된다 -->
+    <title>JIN 포트폴리오 연습</title>
+    <!-- 검색 등에 노출되는 데이터 -->
+    <!-- og tag -->
+    <!-- https://nzn-123.github.io/2025518_ex/ -->
+    <meta property="og:title" content="Jin의 포폴" />
+    <meta property="og:description" content="백엔드 배우고 있어요!" />
+    <meta property="og:url" content="https://nzn-123.github.io/2025518_ex" />
+    <meta
+      property="og:image"
+      content="https://nzn-123.github.io/2025518_ex/og_preview.png"
+    />
+    <!-- ... -->
+
+    <!-- Favicon -->
+    <meta name="description" content="저의 기술을 보여드리죠" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!-- WebFont -->
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+          format("woff2");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+          format("woff2");
+        font-weight: 200;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+          format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+          format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+          format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+          format("woff2");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+          format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2")
+          format("woff2");
+        font-weight: 100;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2")
+          format("woff2");
+        font-weight: 200;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2")
+          format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2")
+          format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2")
+          format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
+          format("woff2");
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Paperozi";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2")
+          format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "KerisKeduLine";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_Line.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      /* 태그 전체에 적용 */
+      /* 1. body 또는 html에다가 폰트를 지정하면 '상속' */
+      body {
+        font-family: "Pretendard";
+      }
+      /* 2. 모든 태그를 지정하는 *로 지정 */
+      * {
+        font-family: "Pretendard";
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Paperozi";
+      }
+      span {
+        font-family: "KerisKeduLine";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 폰트의 경우엔 3가지 정도까진 괜찮음 -->
+    <!-- 제목 폰트 -->
+    <h1>안녕하세요. 저는 정의진입니다.</h1>
+    <h2>저는 백엔드 개발을 공부중입니다.</h2>
+    <!-- 본문/내용 폰트 -->
+    <p>저는 프로그래머스에서 백엔드 교육을 받고 있어요.</p>
+    <!-- 강조/악센트 폰트 -->
+    <p>제 연락처는 <span>uijinnnn609@naver.com</span>입니다.</p>
+  </body>
+</html>
